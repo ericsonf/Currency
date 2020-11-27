@@ -13,6 +13,9 @@ namespace Currency.Test
         }
 
         [Test]
+        [TestCase("0.53", ExpectedResult = 0.53)]
+        [TestCase("0,53", ExpectedResult = 0.53)]
+        [TestCase("1", ExpectedResult = 1.00)]
         [TestCase("1.53", ExpectedResult = 1.53)]
         [TestCase("1,53", ExpectedResult = 1.53)]
         [TestCase("15.37", ExpectedResult = 15.37)]

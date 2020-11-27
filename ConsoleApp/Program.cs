@@ -8,14 +8,14 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            var stringValue = "1.018,36";
+            var stringValue = "1.52";
 
             var formatCurrency = new FormatCurrency();
-            var convertedValue = formatCurrency.GetValue(stringValue);
+            var value = formatCurrency.GetValue(stringValue);
 
-            Console.WriteLine(convertedValue);
-            Console.WriteLine(convertedValue.ToString("C", CultureInfo.CreateSpecificCulture("pt-BR")));
-            Console.WriteLine(convertedValue.ToString("C", NumberFormatInfo.CurrentInfo));
+            Console.WriteLine(value);
+            Console.WriteLine(value.ToString("C", CultureInfo.CreateSpecificCulture("pt-BR")));
+            Console.WriteLine(value.ToString("C", NumberFormatInfo.CurrentInfo));
             Console.ReadLine();
         }
     }
